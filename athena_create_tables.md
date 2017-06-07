@@ -18,7 +18,6 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/customer/';
-```
 
 
  CREATE TABLE Lineitem(
