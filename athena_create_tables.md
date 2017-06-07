@@ -31,9 +31,9 @@ LOCATION 's3://tpch-abcd/1gb/customer/';
     L_Tax decimal(13, 2) ,
     L_ReturnFlag varchar(64) ,
     L_LineStatus varchar(64) ,
-    L_ShipDate datetime ,
-    L_CommitDate datetime ,
-    L_ReceiptDate datetime ,
+    L_ShipDate TIMESTAMP ,
+    L_CommitDate TIMESTAMP ,
+    L_ReceiptDate TIMESTAMP ,
     L_ShipInstruct varchar(64) ,
     L_ShipMode varchar(64) ,
     L_Comment varchar(64)
@@ -65,13 +65,13 @@ CREATE EXTERNAL TABLE IF NOT EXISTS  Orders(
     O_CustKey int ,
     O_OrderStatus varchar(64) ,
     O_TotalPrice decimal(13, 2) ,
-    O_OrderDate datetime ,
+    O_OrderDate TIMESTAMP ,
     O_OrderPriority varchar(15) ,
     O_Clerk varchar(64) ,
     O_ShipPriority int ,
     O_Comment varchar(80) ,
     skip varchar(64)
-    );
+    )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
