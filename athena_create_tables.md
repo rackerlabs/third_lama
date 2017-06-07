@@ -1,3 +1,4 @@
+```
 CREATE DATABASE TPCH_DATA;
 
 USE  TPCH_DATA;
@@ -17,7 +18,7 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/customer/';
-
+```
 
 
  CREATE TABLE Lineitem(
@@ -141,3 +142,5 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/supplier/';
+
+```
