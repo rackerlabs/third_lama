@@ -1,0 +1,41 @@
+/* TPC_H Query 1 - */
+--  Cold / Hot Cache
+-- Native Redshift: 4.36s / 0.8s
+-- Spectrum S3 Storage: 20.58s / 12.77s
+
+/* TPC_H Query 2 - Minimum Cost Supplier */
+-- 16.39s / 1.37s
+-- 22.2s /  10.41s
+
+/* TPC_H Query 3 - Shipping Priority */
+-- 7.72s / 2.75s
+-- 23.91s / 18.46s
+
+/* TPC_H Query 4 - Order Priority Checking */
+-- 8.21s / 0.86s
+-- 24.32s / 18.33s
+
+/* TPC_H Query 5 - Local Supplier Volume */
+-- 9.33s 0.92s
+-- 22.21s / 19.27s
+
+/* TPC_H Query 6 - Forecasting Revenue Change */
+-- 3.65s / 0.23s
+-- 12.21s / 12.85s
+
+/* TPC_H Query 16 - Parts/Supplier Relationship */
+-- 8.92s / 1.45s
+-- 11.07s / 9.0s
+
+/* TPC_H Query 17 - Small-Quantity-Order Revenue */
+-- 7.79s / 0.54s-
+-- 36.01s / 29.11s
+
+/* TPC_H Query 18 - Large Volume Customer */
+-- 10.39s / 1.36s
+-- 37.11s / 31.86s
+
+/* TPC_H Query 19 - Discounted Revenue */
+-- 4.64s / 0.49s
+-- 15.23s / 14.49s
+
