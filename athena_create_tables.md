@@ -36,9 +36,8 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/customer/';
+LOCATION 's3://tpch-datasets/50gb-athena/customer/';
 ```
-
 
 ```
 CREATE EXTERNAL TABLE IF NOT EXISTS Lineitem (
@@ -63,7 +62,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/lineitem/';
+LOCATION 's3://ttpch-datasets/50gb-athena/lineitem/';
 ```
 
 
@@ -79,7 +78,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/nation/';
+LOCATION 's3://tpch-datasets/50gb-athena/nation/';
 ```
 
 
@@ -101,7 +100,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/orders/';
+LOCATION 's3://tpch-datasets/50gb-athena/orders/';
 ```
 
 
@@ -122,7 +121,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/part/';
+LOCATION 's3://tpch-datasets/50gb-athena/part/';
 ```
 
 ```
@@ -138,7 +137,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/partsupp/';
+LOCATION 's3://tpch-datasets/50gb-athena/partsupp/';
 ```
 
 
@@ -153,7 +152,7 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/region/';
+LOCATION 's3://tpch-datasets/50gb-athena/region/';
 ```
 
 ```
@@ -171,5 +170,5 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
 WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
-LOCATION 's3://tpch-abcd/1gb/supplier/';
+LOCATION 's3://tpch-datasets/50gb-athena/supplier/';
 ```
