@@ -1,8 +1,16 @@
+Run each statement separately in the Athena console
+
+
 ```
 CREATE DATABASE TPCH_DATA;
+```
 
+```
 USE  TPCH_DATA;
+```
 
+
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS customer (
     C_CustKey int ,
     C_Name varchar(64) ,
@@ -18,9 +26,11 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/customer/';
+```
 
 
- CREATE EXTERNAL TABLE IF NOT EXISTS Lineitem (
+```
+CREATE EXTERNAL TABLE IF NOT EXISTS Lineitem (
     L_OrderKey int ,
     L_PartKey int ,
     L_SuppKey int ,
@@ -43,8 +53,10 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/lineitem/';
+```
 
 
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Nation(
     N_NationKey int ,
     N_Name varchar(64) ,
@@ -57,9 +69,11 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/nation/';
+```
 
 
 
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Orders(
     O_OrderKey int ,
     O_CustKey int ,
@@ -77,8 +91,10 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/orders/';
+```
 
 
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Part(
     P_PartKey int ,
     P_Name varchar(64) ,
@@ -96,7 +112,9 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/part/';
+```
 
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Partsupp(
     PS_PartKey int ,
     PS_SuppKey int ,
@@ -110,8 +128,10 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/partsupp/';
+```
 
 
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Region(
     R_RegionKey int ,
     R_Name varchar(64) ,
@@ -123,9 +143,9 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/region/';
+```
 
-
-
+```
 CREATE EXTERNAL TABLE IF NOT EXISTS  Supplier(
     S_SuppKey int ,
     S_Name varchar(64) ,
@@ -141,5 +161,4 @@ WITH SERDEPROPERTIES (
  'field.delim' = '|'
 ) 
 LOCATION 's3://tpch-abcd/1gb/supplier/';
-
 ```
