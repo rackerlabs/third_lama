@@ -20,7 +20,7 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://tpch-abcd/1gb/customer/';
 
 
- CREATE TABLE Lineitem(
+ CREATE EXTERNAL TABLE IF NOT EXISTS Lineitem (
     L_OrderKey int ,
     L_PartKey int ,
     L_SuppKey int ,
@@ -45,7 +45,7 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://tpch-abcd/1gb/lineitem/';
 
 
-CREATE TABLE Nation(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Nation(
     N_NationKey int ,
     N_Name varchar(64) ,
     N_RegionKey int ,
@@ -60,7 +60,7 @@ LOCATION 's3://tpch-abcd/1gb/nation/';
 
 
 
-CREATE TABLE Orders(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Orders(
     O_OrderKey int ,
     O_CustKey int ,
     O_OrderStatus varchar(64) ,
@@ -79,7 +79,7 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://tpch-abcd/1gb/orders/';
 
 
-CREATE TABLE Part(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Part(
     P_PartKey int ,
     P_Name varchar(64) ,
     P_Mfgr varchar(64) ,
@@ -97,7 +97,7 @@ WITH SERDEPROPERTIES (
 ) 
 LOCATION 's3://tpch-abcd/1gb/part/';
 
-CREATE TABLE Partsupp(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Partsupp(
     PS_PartKey int ,
     PS_SuppKey int ,
     PS_AvailQty int ,
@@ -112,7 +112,7 @@ WITH SERDEPROPERTIES (
 LOCATION 's3://tpch-abcd/1gb/partsupp/';
 
 
-CREATE TABLE Region(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Region(
     R_RegionKey int ,
     R_Name varchar(64) ,
     R_Comment varchar(160) ,
@@ -126,7 +126,7 @@ LOCATION 's3://tpch-abcd/1gb/region/';
 
 
 
-CREATE TABLE Supplier(
+CREATE EXTERNAL TABLE IF NOT EXISTS  Supplier(
     S_SuppKey int ,
     S_Name varchar(64) ,
     S_Address varchar(64) ,
